@@ -1,0 +1,23 @@
+venv/
+__pycache__/
+*.py[cod]
+
+# Local data and generated indexes
+storage/
+DATA/
+sqlqa_storage/
+available_databases
+available_databases.json
+users.json
+conversation_memory.json
+corrected_sql_data.jsonl
+
+# Local secrets and scratch files
+.env
+.env.*
+!.env.example
+secrets.toml
+tempCodeRunnerFile.py
+
+# Frontend is intentionally excluded until it is working
+frontend/

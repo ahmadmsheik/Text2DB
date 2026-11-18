@@ -1,0 +1,379 @@
+{
+  "GoRestoraV2DB": {
+    "Attendances": {
+      "Employees": "Attendances.EmployeeId = Employees.Id",
+      "Shifts": "Attendances.ShiftId = Shifts.Id"
+    },
+    "Employees": {
+      "Attendances": "Attendances.EmployeeId = Employees.Id",
+      "EmployeeAttachments": "EmployeeAttachments.EmployeeId = Employees.Id",
+      "EmployeeDeductions": "EmployeeDeductions.EmployeeId = Employees.Id",
+      "EmployeeEarnings": "EmployeeEarnings.EmployeeId = Employees.Id",
+      "Departments": "Employees.DepartmentId = Departments.Id",
+      "Designations": "Employees.DesignationId = Designations.Id",
+      "Shifts": "Employees.ShiftId = Shifts.Id",
+      "LeaveRequests": "LeaveRequests.EmployeeId = Employees.Id",
+      "Payrolls": "Payrolls.EmployeeId = Employees.Id"
+    },
+    "Shifts": {
+      "Attendances": "Attendances.ShiftId = Shifts.Id",
+      "Employees": "Employees.ShiftId = Shifts.Id"
+    },
+    "Deposits": {
+      "Accounts": "Deposits.AccountId = Accounts.Id"
+    },
+    "Accounts": {
+      "Deposits": "Deposits.AccountId = Accounts.Id",
+      "Expenses": "Expenses.AccountId = Accounts.Id",
+      "Transactions": "Transactions.AccountId = Accounts.Id"
+    },
+    "EmployeeAttachments": {
+      "Employees": "EmployeeAttachments.EmployeeId = Employees.Id"
+    },
+    "EmployeeDeductions": {
+      "Employees": "EmployeeDeductions.EmployeeId = Employees.Id"
+    },
+    "EmployeeEarnings": {
+      "Employees": "EmployeeEarnings.EmployeeId = Employees.Id"
+    },
+    "Departments": {
+      "Employees": "Employees.DepartmentId = Departments.Id"
+    },
+    "Designations": {
+      "Employees": "Employees.DesignationId = Designations.Id"
+    },
+    "Expenses": {
+      "Accounts": "Expenses.AccountId = Accounts.Id"
+    },
+    "FoodItemIngredients": {
+      "FoodItems": "FoodItemIngredients.FoodItemId = FoodItems.Id",
+      "IngredientItems": "FoodItemIngredients.IngredientId = IngredientItems.Id"
+    },
+    "FoodItems": {
+      "FoodItemIngredients": "FoodItemIngredients.FoodItemId = FoodItems.Id",
+      "FoodGroups": "FoodItems.GroupId = FoodGroups.Id",
+      "OrderDetails": "OrderDetails.ItemId = FoodItems.Id",
+      "RunningOrderDetails": "RunningOrderDetails.ItemId = FoodItems.Id"
+    },
+    "IngredientItems": {
+      "FoodItemIngredients": "FoodItemIngredients.IngredientId = IngredientItems.Id",
+      "ModifierIngredients": "ModifierIngredients.IngredientId = IngredientItems.Id",
+      "PurchaseDetails": "PurchaseDetails.IngredientItemId = IngredientItems.Id"
+    },
+    "FoodGroups": {
+      "FoodItems": "FoodItems.GroupId = FoodGroups.Id"
+    },
+    "LeaveRequests": {
+      "Employees": "LeaveRequests.EmployeeId = Employees.Id"
+    },
+    "ModifierIngredients": {
+      "IngredientItems": "ModifierIngredients.IngredientId = IngredientItems.Id",
+      "Modifiers": "ModifierIngredients.ModifierId = Modifiers.Id"
+    },
+    "Modifiers": {
+      "ModifierIngredients": "ModifierIngredients.ModifierId = Modifiers.Id",
+      "OrderItemModifiers": "OrderItemModifiers.ModifierId = Modifiers.Id",
+      "RunningOrderItemModifiers": "RunningOrderItemModifiers.ModifierId = Modifiers.Id"
+    },
+    "OrderDetails": {
+      "FoodItems": "OrderDetails.ItemId = FoodItems.Id",
+      "Orders": "OrderDetails.OrderId = Orders.Id",
+      "OrderItemModifiers": "OrderItemModifiers.OrderDetailId = OrderDetails.Id"
+    },
+    "Orders": {
+      "OrderDetails": "OrderDetails.OrderId = Orders.Id",
+      "Customers": "Orders.CustomerId = Customers.Id"
+    },
+    "OrderItemModifiers": {
+      "Modifiers": "OrderItemModifiers.ModifierId = Modifiers.Id",
+      "OrderDetails": "OrderItemModifiers.OrderDetailId = OrderDetails.Id"
+    },
+    "Customers": {
+      "Orders": "Orders.CustomerId = Customers.Id",
+      "RunningOrders": "RunningOrders.CustomerId = Customers.Id"
+    },
+    "PayrollDetails": {
+      "Payrolls": "PayrollDetails.PayrollId = Payrolls.Id"
+    },
+    "Payrolls": {
+      "PayrollDetails": "PayrollDetails.PayrollId = Payrolls.Id",
+      "Employees": "Payrolls.EmployeeId = Employees.Id"
+    },
+    "PurchaseDetails": {
+      "IngredientItems": "PurchaseDetails.IngredientItemId = IngredientItems.Id",
+      "Purchases": "PurchaseDetails.PurchaseId = Purchases.Id"
+    },
+    "Purchases": {
+      "PurchaseDetails": "PurchaseDetails.PurchaseId = Purchases.Id",
+      "Suppliers": "Purchases.SupplierId = Suppliers.Id"
+    },
+    "Suppliers": {
+      "Purchases": "Purchases.SupplierId = Suppliers.Id"
+    },
+    "RunningOrderDetails": {
+      "FoodItems": "RunningOrderDetails.ItemId = FoodItems.Id",
+      "RunningOrders": "RunningOrderDetails.OrderId = RunningOrders.Id",
+      "RunningOrderItemModifiers": "RunningOrderItemModifiers.OrderDetailId = RunningOrderDetails.Id"
+    },
+    "RunningOrders": {
+      "RunningOrderDetails": "RunningOrderDetails.OrderId = RunningOrders.Id",
+      "Charges": "RunningOrders.ChargesId = Charges.Id",
+      "Customers": "RunningOrders.CustomerId = Customers.Id",
+      "Discounts": "RunningOrders.DiscountId = Discounts.Id",
+      "TaxRates": "RunningOrders.TaxId = TaxRates.Id"
+    },
+    "RunningOrderItemModifiers": {
+      "Modifiers": "RunningOrderItemModifiers.ModifierId = Modifiers.Id",
+      "RunningOrderDetails": "RunningOrderItemModifiers.OrderDetailId = RunningOrderDetails.Id"
+    },
+    "Charges": {
+      "RunningOrders": "RunningOrders.ChargesId = Charges.Id"
+    },
+    "Discounts": {
+      "RunningOrders": "RunningOrders.DiscountId = Discounts.Id"
+    },
+    "TaxRates": {
+      "RunningOrders": "RunningOrders.TaxId = TaxRates.Id"
+    },
+    "StringResources": {
+      "Languages": "StringResources.LanguageId = Languages.Id"
+    },
+    "Languages": {
+      "StringResources": "StringResources.LanguageId = Languages.Id"
+    },
+    "Transactions": {
+      "Accounts": "Transactions.AccountId = Accounts.Id"
+    }
+  },
+  "GoPosifyDB": {
+    "Products": {
+      "Units": "Products.PurchaseUnitId = Units.Id",
+      "Brands": "Products.BrandId = Brands.Id",
+      "Categories": "Products.CategoryId = Categories.Id",
+      "TaxRates": "Products.TaxId = TaxRates.Id",
+      "ProductVariants": "ProductVariants.ProductId = Products.Id",
+      "ProductWarehouses": "ProductWarehouses.ProductId = Products.Id",
+      "PurchaseDetails": "PurchaseDetails.ProductId = Products.Id",
+      "PurchaseReturnDetails": "PurchaseReturnDetails.ProductId = Products.Id",
+      "QuotationDetails": "QuotationDetails.ProductId = Products.Id",
+      "SaleDetails": "SaleDetails.ProductId = Products.Id",
+      "SaleReturnDetails": "SaleReturnDetails.ProductId = Products.Id",
+      "StockAdjustmentDetails": "StockAdjustmentDetails.ProductId = Products.Id",
+      "StockTransferDetails": "StockTransferDetails.ProductId = Products.Id"
+    },
+    "Units": {
+      "Products": "Products.PurchaseUnitId = Units.Id"
+    },
+    "AccountTransactions": {
+      "Accounts": "AccountTransactions.AccountId = Accounts.Id"
+    },
+    "Accounts": {
+      "AccountTransactions": "AccountTransactions.AccountId = Accounts.Id",
+      "Deposits": "Deposits.AccountId = Accounts.Id",
+      "Expenses": "Expenses.AccountId = Accounts.Id",
+      "Transfers": "Transfers.SenderAccountId = Accounts.Id"
+    },
+    "Attendances": {
+      "Employees": "Attendances.EmployeeId = Employees.Id"
+    },
+    "Employees": {
+      "Attendances": "Attendances.EmployeeId = Employees.Id",
+      "EmployeeAttachments": "EmployeeAttachments.EmployeeId = Employees.Id",
+      "EmployeeDeductions": "EmployeeDeductions.EmployeeId = Employees.Id",
+      "EmployeeEarnings": "EmployeeEarnings.EmployeeId = Employees.Id",
+      "Departments": "Employees.DepartmentId = Departments.Id",
+      "Designations": "Employees.DesignationId = Designations.Id",
+      "OfficeShifts": "Employees.ShiftId = OfficeShifts.Id",
+      "LeaveRequests": "LeaveRequests.EmployeeId = Employees.Id",
+      "Payrolls": "Payrolls.EmployeeId = Employees.Id"
+    },
+    "Deposits": {
+      "Accounts": "Deposits.AccountId = Accounts.Id"
+    },
+    "EmployeeAttachments": {
+      "Employees": "EmployeeAttachments.EmployeeId = Employees.Id"
+    },
+    "EmployeeDeductions": {
+      "Employees": "EmployeeDeductions.EmployeeId = Employees.Id"
+    },
+    "EmployeeEarnings": {
+      "Employees": "EmployeeEarnings.EmployeeId = Employees.Id"
+    },
+    "Departments": {
+      "Employees": "Employees.DepartmentId = Departments.Id"
+    },
+    "Designations": {
+      "Employees": "Employees.DesignationId = Designations.Id"
+    },
+    "OfficeShifts": {
+      "Employees": "Employees.ShiftId = OfficeShifts.Id"
+    },
+    "Expenses": {
+      "Accounts": "Expenses.AccountId = Accounts.Id"
+    },
+    "GiftCards": {
+      "Customers": "GiftCards.CustomerId = Customers.Id"
+    },
+    "Customers": {
+      "GiftCards": "GiftCards.CustomerId = Customers.Id",
+      "Quotations": "Quotations.CustomerId = Customers.Id",
+      "SaleReturns": "SaleReturns.CustomerId = Customers.Id",
+      "Sales": "Sales.CustomerId = Customers.Id"
+    },
+    "LeaveRequests": {
+      "Employees": "LeaveRequests.EmployeeId = Employees.Id"
+    },
+    "PayrollDetails": {
+      "Payrolls": "PayrollDetails.PayrollId = Payrolls.Id"
+    },
+    "Payrolls": {
+      "PayrollDetails": "PayrollDetails.PayrollId = Payrolls.Id",
+      "Employees": "Payrolls.EmployeeId = Employees.Id"
+    },
+    "Brands": {
+      "Products": "Products.BrandId = Brands.Id"
+    },
+    "Categories": {
+      "Products": "Products.CategoryId = Categories.Id"
+    },
+    "TaxRates": {
+      "Products": "Products.TaxId = TaxRates.Id"
+    },
+    "ProductVariants": {
+      "Products": "ProductVariants.ProductId = Products.Id",
+      "ProductWarehouses": "ProductWarehouses.VariantId = ProductVariants.Id",
+      "PurchaseDetails": "PurchaseDetails.VariantId = ProductVariants.Id",
+      "PurchaseReturnDetails": "PurchaseReturnDetails.VariantId = ProductVariants.Id",
+      "QuotationDetails": "QuotationDetails.VariantId = ProductVariants.Id",
+      "SaleDetails": "SaleDetails.VariantId = ProductVariants.Id",
+      "SaleReturnDetails": "SaleReturnDetails.VariantId = ProductVariants.Id",
+      "StockAdjustmentDetails": "StockAdjustmentDetails.VariantId = ProductVariants.Id",
+      "StockTransferDetails": "StockTransferDetails.VariantId = ProductVariants.Id"
+    },
+    "ProductWarehouses": {
+      "Products": "ProductWarehouses.ProductId = Products.Id",
+      "ProductVariants": "ProductWarehouses.VariantId = ProductVariants.Id",
+      "Warehouses": "ProductWarehouses.WarehouseId = Warehouses.Id"
+    },
+    "Warehouses": {
+      "ProductWarehouses": "ProductWarehouses.WarehouseId = Warehouses.Id",
+      "PurchaseReturns": "PurchaseReturns.WarehouseId = Warehouses.Id",
+      "Purchases": "Purchases.WarehouseId = Warehouses.Id",
+      "Quotations": "Quotations.WarehouseId = Warehouses.Id",
+      "SaleReturns": "SaleReturns.WarehouseId = Warehouses.Id",
+      "Sales": "Sales.WarehouseId = Warehouses.Id",
+      "StockAdjustments": "StockAdjustments.WarehouseId = Warehouses.Id",
+      "StockTransfers": "StockTransfers.ToWarehouseId = Warehouses.Id",
+      "UserWarehouses": "UserWarehouses.WarehouseId = Warehouses.Id"
+    },
+    "PurchaseDetails": {
+      "Products": "PurchaseDetails.ProductId = Products.Id",
+      "ProductVariants": "PurchaseDetails.VariantId = ProductVariants.Id",
+      "Purchases": "PurchaseDetails.PurchaseId = Purchases.Id"
+    },
+    "Purchases": {
+      "PurchaseDetails": "PurchaseDetails.PurchaseId = Purchases.Id",
+      "Suppliers": "Purchases.SupplierId = Suppliers.Id",
+      "Warehouses": "Purchases.WarehouseId = Warehouses.Id"
+    },
+    "PurchaseReturnDetails": {
+      "Products": "PurchaseReturnDetails.ProductId = Products.Id",
+      "ProductVariants": "PurchaseReturnDetails.VariantId = ProductVariants.Id",
+      "PurchaseReturns": "PurchaseReturnDetails.PurchaseReturnId = PurchaseReturns.Id"
+    },
+    "PurchaseReturns": {
+      "PurchaseReturnDetails": "PurchaseReturnDetails.PurchaseReturnId = PurchaseReturns.Id",
+      "Suppliers": "PurchaseReturns.SupplierId = Suppliers.Id",
+      "Warehouses": "PurchaseReturns.WarehouseId = Warehouses.Id"
+    },
+    "Suppliers": {
+      "PurchaseReturns": "PurchaseReturns.SupplierId = Suppliers.Id",
+      "Purchases": "Purchases.SupplierId = Suppliers.Id"
+    },
+    "QuotationDetails": {
+      "Products": "QuotationDetails.ProductId = Products.Id",
+      "ProductVariants": "QuotationDetails.VariantId = ProductVariants.Id",
+      "Quotations": "QuotationDetails.QuotationId = Quotations.Id"
+    },
+    "Quotations": {
+      "QuotationDetails": "QuotationDetails.QuotationId = Quotations.Id",
+      "Customers": "Quotations.CustomerId = Customers.Id",
+      "Warehouses": "Quotations.WarehouseId = Warehouses.Id"
+    },
+    "SaleDetails": {
+      "Products": "SaleDetails.ProductId = Products.Id",
+      "ProductVariants": "SaleDetails.VariantId = ProductVariants.Id",
+      "Sales": "SaleDetails.SaleId = Sales.Id"
+    },
+    "Sales": {
+      "SaleDetails": "SaleDetails.SaleId = Sales.Id",
+      "Customers": "Sales.CustomerId = Customers.Id",
+      "Warehouses": "Sales.WarehouseId = Warehouses.Id"
+    },
+    "SaleReturnDetails": {
+      "Products": "SaleReturnDetails.ProductId = Products.Id",
+      "ProductVariants": "SaleReturnDetails.VariantId = ProductVariants.Id",
+      "SaleReturns": "SaleReturnDetails.SaleReturnId = SaleReturns.Id"
+    },
+    "SaleReturns": {
+      "SaleReturnDetails": "SaleReturnDetails.SaleReturnId = SaleReturns.Id",
+      "Customers": "SaleReturns.CustomerId = Customers.Id",
+      "Warehouses": "SaleReturns.WarehouseId = Warehouses.Id"
+    },
+    "StockAdjustmentDetails": {
+      "Products": "StockAdjustmentDetails.ProductId = Products.Id",
+      "ProductVariants": "StockAdjustmentDetails.VariantId = ProductVariants.Id",
+      "StockAdjustments": "StockAdjustmentDetails.StockAdjustmentId = StockAdjustments.Id"
+    },
+    "StockAdjustments": {
+      "StockAdjustmentDetails": "StockAdjustmentDetails.StockAdjustmentId = StockAdjustments.Id",
+      "Warehouses": "StockAdjustments.WarehouseId = Warehouses.Id"
+    },
+    "StockTransferDetails": {
+      "Products": "StockTransferDetails.ProductId = Products.Id",
+      "ProductVariants": "StockTransferDetails.VariantId = ProductVariants.Id",
+      "StockTransfers": "StockTransferDetails.StockTransferId = StockTransfers.Id"
+    },
+    "StockTransfers": {
+      "StockTransferDetails": "StockTransferDetails.StockTransferId = StockTransfers.Id",
+      "Warehouses": "StockTransfers.ToWarehouseId = Warehouses.Id"
+    },
+    "StringResources": {
+      "Languages": "StringResources.LanguageName = Languages.Name"
+    },
+    "Languages": {
+      "StringResources": "StringResources.LanguageName = Languages.Name"
+    },
+    "Transfers": {
+      "Accounts": "Transfers.SenderAccountId = Accounts.Id"
+    },
+    "Users": {
+      "Roles": "Users.RoleId = Roles.Id",
+      "UserTokens": "UserTokens.UserId = Users.Id",
+      "UserWarehouses": "UserWarehouses.UserId = Users.Id"
+    },
+    "Roles": {
+      "Users": "Users.RoleId = Roles.Id"
+    },
+    "UserTokens": {
+      "Users": "UserTokens.UserId = Users.Id"
+    },
+    "UserWarehouses": {
+      "Users": "UserWarehouses.UserId = Users.Id",
+      "Warehouses": "UserWarehouses.WarehouseId = Warehouses.Id"
+    }
+  },
+  "A": {},
+  "SchoolDB": {
+    "Enrollments": {
+      "Courses": "Enrollments.CourseID = Courses.CourseID",
+      "Students": "Enrollments.StudentID = Students.StudentID"
+    },
+    "Courses": {
+      "Enrollments": "Enrollments.CourseID = Courses.CourseID"
+    },
+    "Students": {
+      "Enrollments": "Enrollments.StudentID = Students.StudentID"
+    }
+  }
+}
